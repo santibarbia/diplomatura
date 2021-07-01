@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        {{#each usuarios}}
+            <div class="col mt-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{username}}</h5>
+                        <p class="card-text">Habilitado: {{habilitado}}</p>
+                        <a href="/productos/single/{{id}}" class="btn btn-primary">Ver Mas</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

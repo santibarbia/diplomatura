@@ -1,0 +1,20 @@
+<h1>Entraste a alumno</h1>
+<h2>Nombre del alumno : {{nombre}}</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each alumnos}}
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{nombre}}</td>
+      <td>{{apellido}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

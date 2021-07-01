@@ -1,0 +1,19 @@
+<div class="container-fluid bg-dark" style="height: 100vh">
+    <div class="row justify-content-center aling-item-center">
+        <div class="col-4 bg-dark mt-4">
+            <form method="POST" action="/productos/create">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre producto</label>
+                    <input type="text" placeholder="Ingrese Nombre" class="form-control" id="nombre" name="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="id_categoria" class="form-label">Categoria</label>
+                    <input type="number" placeholder="Ingrese Categoria" class="form-control" id="id_categoria" name="id_categoria">
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-block">Crear Producto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container-fluid bg-dark" style="height:100vh">
+<div class="row justify-content-center aling-item-center" style="height:100vh">
+    <div class="col-7 text-light">
+        <form method="POST" action="/admin/empleados/create" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Ingrese nombre<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Ingrese apellido<span
+                        class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="apellido" name="apellido">
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Ingrese telefono<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="telefono" name="telefono">
+            </div>
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Ingrese direccion<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="direccion" name="direccion">
+            </div>
+            <div class="mb-3">
+                <label for="imagen" class="form-label">Agregar Imagen<span class="text-danger">*</span></label>
+                <input type="file" name="imagen" id="imagen">
+            </div>
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-info mt-2">Agregar Empleados</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

@@ -1,0 +1,23 @@
+Extensiones
+-Mithril emme
+-open in browser
+-Beautify
+
+<html>
+
+
+
+</html>
+
+etiquetas
+    -h1 a h6
+    -p (parrafo)
+    -br(Espacio entre etiquetas)
+    -a
+    -body(cuerpo del html: lo que va en la pagina)
+    -head(conexiones)
+    -title(titulo de la pagina)
+    -img (imagenes)
+
+Tarea en clase:
+Hacer una presentacion en html sobre nosotros mismo usando las distintas etiquetas

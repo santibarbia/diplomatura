@@ -1,0 +1,20 @@
+<div class="container-fluid bg-dark" style="height:100vh">
+    <div class="row justify-content-center aling-item-center" style="height:100vh">
+        <div class="col-7 text-light">
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Ingrese username<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="username" name="username">
+                </div>
+                <div class="mb-3">
+                    <label for="pass" class="form-label">Ingrese password<span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" id="pass" name="pass">
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-info mt-2">Login</button>
+                </div>
+            </form>
+            <p>{{message}}</p>
+        </div>
+    </div>
+</div>

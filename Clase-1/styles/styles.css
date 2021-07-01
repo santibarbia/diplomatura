@@ -1,0 +1,23 @@
+body{
+    background-image: url("../LogSinErrores.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titulo{
+    background-color: saddlebrown;
+    color: white;
+    font-size: 100px;
+}
+
+.margen{
+    background-color: tomato;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    /*margin-left: 100px;
+    margin-right: 100px;
+    margin: top right bottom left*/
+    margin: 100px 50px 20px 30px;
+}

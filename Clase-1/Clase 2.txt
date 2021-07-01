@@ -1,0 +1,20 @@
+
+Division de una pagina web
+
+    header : titulo de la pagina o encabezado
+    sections : seciones para dividir la pagina
+    article : articulo o seccion de un articulo
+    div : bloque de etiquetas en la web
+    footer : pie de pagina 
+
+tablas
+
+CSS
+
+
+font-awesome
+
+
+
+
+

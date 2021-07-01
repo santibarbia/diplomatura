@@ -1,0 +1,36 @@
+<div class="container-fluid bg-dark" style="height:100vh">
+<div class="row justify-content-center aling-item-center" style="height:100vh">
+    <div class="col-7 text-light">
+        <form method="POST" action="/admin/productos/create">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Ingrese nombre<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Ingrese descripcion<span
+                        class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion">
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Ingrese precio<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="precio" name="precio">
+            </div>
+            <div class="mb-3">
+                <label for="stock" class="form-label">Ingrese stock<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="stock" name="stock">
+            </div>
+            <div class="mb-3">
+                <select class="form-select" name="id_categoria">
+                    <option selected>Elegir una opcion</option>
+                    {{#each categorias}}
+                    <option value="{{id}}">{{nombre}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-info mt-2">Agregar Producto</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

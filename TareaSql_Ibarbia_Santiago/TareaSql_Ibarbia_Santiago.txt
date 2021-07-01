@@ -1,0 +1,15 @@
+1) SELECT `nombre`,`trabajo` FROM `empleados`
+2) SELECT `nombre`,`edad` FROM `empleados`
+3) SELECT `nombre`,`edad` FROM `empleados` WHERE `trabajo` LIKE "Programador%"
+4) SELECT * FROM `empleados` WHERE edad > 30
+5) SELECT `apellido`,`mail` FROM `empleados` WHERE `nombre` LIKE "Juan"
+6) SELECT `nombre` FROM `empleados` WHERE `trabajo` LIKE "%Programador%" OR `trabajo` LIKE "%Desarrollador Web%"
+7) SELECT `id_emp`,`nombre`,`apellido`,`trabajo` FROM `empleados` WHERE id_emp BETWEEN 15 AND 20
+8) SELECT * FROM `empleados` WHERE `trabajo` LIKE "%Programador%" AND `salario` < 800
+9) SELECT * FROM `empleados` WHERE `trabajo` LIKE "%Programador%" AND `salario` BETWEEN 750 AND 900
+10) SELECT * FROM `empleados` WHERE `apellido` LIKE "s%"
+11) SELECT * FROM `empleados` WHERE `nombre` LIKE "%l"
+12) INSERT INTO empleados(`id_emp`,`nombre`,`apellido`,`trabajo`,`edad`,`salario`,`mail`,`ts_create`,`ts_update`,`eliminado`) VALUES (22,"Francisco","Perez","Programador",26,900,"francisco@bignet.com",CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,1)
+13) Borrado Logico: -> UPDATE empleados SET `eliminado` = 0 WHERE `nombre` LIKE "Hernan%" AND `apellido` LIKE "Rosso%"
+	-> Borrado Fisico : DELETE FROM empleados WHERE `nombre` LIKE "Hernan%" AND `apellido` LIKE "Rosso%"
+14)  UPDATE empleados SET `salario` = 900 WHERE `nombre` LIKE "Daniel%" AND `apellido` LIKE "Gutierrez%"
