@@ -15,10 +15,22 @@ const verificar = async (uid) =>{
 }
 
 const auth = async(username,pass) =>{
-    const query = "SELECT * FROM ?? WHERE username = ? AND pass = ? AND habilitado = 1";
+    const query = "SELECT id, admin FROM ?? WHERE username = ? AND pass = ? AND habilitado = 1";
     const params = [process.env.T_USUARIOS,username,pass]
     return await pool.query(query,params);
 
 }
 
-module.exports = {create,verificar,auth};
+const getSingle = async (id) =>{
+    const query = "SELECT * FROM ?? WHERE id = ?"
+    const params = [process.env.T_USUARIOS,id];
+    return await pool.query(query,params);
+}
+
+const update = async (id,obj)=>{
+    const query = "UPDATE ?? SET ? WHERE id = ?"
+    const params = [process.env.T_USUARIOS,obj,id];
+    return await pool.query(query,params);
+}
+
+module.exports = {create,verificar,auth,getSingle,update};

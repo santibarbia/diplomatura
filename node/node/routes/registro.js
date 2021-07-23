@@ -3,10 +3,11 @@ const router = express.Router();
 const {create, verificar} = require('../models/usuarios');
 const sha1 = require('sha1');
 const {v4 : uuid} = require('uuid');
-const {send} = require('../services/mail')
+const {send} = require('../services/mail');
+const {validateRegistro}= require('../middlewares/usuarios');
 
 const showRegistro = (req,res)=>{
-    res.render('registro')
+    res.render('registro',{message:''})
 }
 
 const registrate = async (req,res)=>{
@@ -44,7 +45,7 @@ const verify = async (req,res) => {
 }
 
 router.get('/',showRegistro);
-router.post('/create',registrate);
+router.post('/create',validateRegistro,registrate);
 router.get('/verify/:uid',verify);
 
 module.exports = router;

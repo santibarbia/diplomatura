@@ -4,8 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const dotenv = require('dotenv');
+const session = require('express-session');
+
 
 dotenv.config();
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const productos = require('./routes/productos');
@@ -16,6 +19,8 @@ const adminProductos = require('./routes/admin/productos');
 const adminCategorias = require('./routes/admin/categorias');
 const adminUsuarios = require('./routes/admin/usuarios');
 const adminEmpleados = require('./routes/admin/empleados');
+const usuarios = require('./routes/usuarios');
+const {verify,verifyAdmin} = require('./middlewares/auth');
 
 
 var app = express();
@@ -29,17 +34,24 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret:'passwordSecreto',
+  cookie:{maxAge:null},
+  resave:true,
+  saveUninitialized: false
+}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/productos',productos);
 app.use('/registro',registro);
 app.use('/login', login);
-app.use('/admin',adminIndex);
+app.use('/admin',verifyAdmin,adminIndex);
 app.use('/admin/productos',adminProductos);
 app.use('/admin/categoryos',adminCategorias);
 app.use('/admin/usuarios',adminUsuarios);
 app.use('/admin/empleados',adminEmpleados);
+app.use('/usuarios',verify,usuarios);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
