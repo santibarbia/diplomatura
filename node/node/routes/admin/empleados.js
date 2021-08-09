@@ -8,7 +8,7 @@ const {get} = require("../../models/empleados");
 
 
 const create = async (req, res) => {
-    console.log(req.body,req.file);
+    console.log("Observar Aca ",req.file);
     const idImg = await createEmpleado(req.body,req.file);
     console.log(idImg);
     res.redirect('/admin/empleados')
